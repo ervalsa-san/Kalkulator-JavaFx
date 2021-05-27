@@ -1,0 +1,61 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.TextField?>
+
+<GridPane fx:controller="sample.Controller"
+          xmlns:fx="http://javafx.com/fxml"
+          alignment="center"
+          hgap="10"
+          vgap="10">
+
+    <Label text="Kalkulator Sederhana"
+           textFill="purple"
+           GridPane.columnIndex="0"
+           GridPane.rowIndex="0"/>
+
+    <VBox GridPane.columnIndex="0" GridPane.rowIndex="1">
+        <Label text="Masukkan Bilangan Pertama"/>
+        <TextField fx:id="tfBilanganPertama"
+                   focusTraversable="false"
+                   promptText="Masukkan Bilangan Pertama"/>
+    </VBox>
+
+    <VBox GridPane.columnIndex="0" GridPane.rowIndex="2">
+        <Label text="Masukkan Bilangan Kedua"/>
+        <TextField fx:id="tfBilanganKedua"
+                   focusTraversable="false"
+                   promptText="Masukkan Bilangan Kedua"/>
+    </VBox>
+
+    <HBox spacing="10" GridPane.columnIndex="0" GridPane.rowIndex="3">
+        <Button fx:id="btnTambah" GridPane.columnIndex="0" GridPane.rowIndex="3"
+                text="Tambah"
+                textAlignment="CENTER"
+                onAction="#onButtonClicked"/>
+
+        <Button fx:id="btnKurang" GridPane.columnIndex="0" GridPane.rowIndex="3"
+                text="Kurang"
+                textAlignment="CENTER"
+                onAction="#onButtonClicked"/>
+
+        <Button fx:id="btnKali" GridPane.columnIndex="0" GridPane.rowIndex="3"
+                text="Kali"
+                textAlignment="CENTER"
+                onAction="#onButtonClicked"/>
+
+        <Button fx:id="btnBagi" GridPane.columnIndex="0" GridPane.rowIndex="3"
+                text="Bagi"
+                textAlignment="CENTER"
+                onAction="#onButtonClicked"/>
+    </HBox>
+
+    <VBox GridPane.columnIndex="0" GridPane.rowIndex="4">
+        <Label text="Hasil"/>
+        <TextField fx:id="tfHasil"
+                   disable="true"/>
+    </VBox>
+</GridPane>
